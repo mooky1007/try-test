@@ -53,7 +53,7 @@ class TestPage {
             document.querySelector('.title').innerHTML = this.result.filter(({point}) => {
                 const min = point.split("-")[0];
                 const max = point.split("-")[1];
-                if(this.point >= min && this.point <= max){
+                if(this.point >= +min && this.point <= +max){
                     return true;
                 }else{
                     return false;
@@ -62,7 +62,7 @@ class TestPage {
             document.querySelector('.description').innerHTML = this.result.filter(({point}) => {
                 const min = point.split("-")[0];
                 const max = point.split("-")[1];
-                if(this.point >= min && this.point <= max){
+                if(this.point >= +min && this.point <= +max){
                     return true;
                 }else{
                     return false;
