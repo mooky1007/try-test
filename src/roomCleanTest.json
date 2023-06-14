@@ -1,0 +1,237 @@
+{
+    "title": "~ 자취룸의 제왕 ~",
+    "description": "방청소, 얼마나 제대로 하고 계신가요?",
+    "type": "point",
+    "startButton": "청소 시작!",
+    "designConfig" : {
+        "fontColor": "#fff",
+        "backgroundColor": "#000",
+        "fontFamily": "Noto Sans KR"
+    },
+    "data": [
+        {
+            "question": "청소하기 전, 환기를 시키기 위해 창문을 열어두는 편인가요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "당연히 그렇다.",
+                    "point": 2
+                },{
+                    "answer": "가끔?",
+                    "point": 1
+                },{
+                    "answer": "여름엔 모기 들어오고, 겨울엔 추워서 안한다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "침구, 커튼, 쿠션등 페브릭 제품의 세탁 주기는 얼마나 되나요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "1주일에 한 번 이상",
+                    "point": 2
+                },{
+                    "answer": "한 달에 한 번 이상",
+                    "point": 1
+                },{
+                    "answer": "어... ㅎ",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "마지막으로 화장실을 청소한 날짜는 언제인가요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "일주일 이내",
+                    "point": 2
+                },{
+                    "answer": "한 달 이내",
+                    "point": 1
+                },{
+                    "answer": "매일 씻으니까 청소 안해도 되지 않나요?",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "청소기를 돌릴 때, 침대나 행거 밑까지 꼼꼼하게 청소하는 편인가요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "당연히 그렇다.",
+                    "point": 2
+                },{
+                    "answer": "눈에 보이는 곳만 청소한다.",
+                    "point": 1
+                },{
+                    "answer": "청소기가 없어서 못한다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "청소기를 돌린 후 바닥을 닦는 편인가요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "당연히 그렇다.",
+                    "point": 2
+                },{
+                    "answer": "가끔 닦는다.",
+                    "point": 1
+                },{
+                    "answer": "청소기 돌렸으니까 닦을 필요 없다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "가구나 소품 위에 쌓인 먼지는 얼마나 자주 닦나요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "매일 닦는다.",
+                    "point": 2
+                },{
+                    "answer": "일주일에 한 번 이상 닦는다.",
+                    "point": 1
+                },{
+                    "answer": "먼지가 쌓이면 닦는다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "당신의 책상 위는 정돈 되어 있나요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "당연히 그렇다.",
+                    "point": 2
+                },{
+                    "answer": "가끔 정리한다.",
+                    "point": 1
+                },{
+                    "answer": "저래보여도 나름 정리된 상태다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "옷정리는 어떻게 하나요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "늘 옷걸이에 걸어둔다.",
+                    "point": 2
+                },{
+                    "answer": "자주 입는 옷은 의자나 가구에 걸쳐둔다.",
+                    "point": 1
+                },{
+                    "answer": "바닥에 던져둔다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "당신의 냉장고 안은 어떤가요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "정리되어 있다.",
+                    "point": 2
+                },{
+                    "answer": "먹을 수 없는 음식은 없는 편이다.",
+                    "point": 1
+                },{
+                    "answer": "뭐가 들어 있는지 모른다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "설거지는 어떻게 하나요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "먹고나서 바로 설거지를 한다.",
+                    "point": 2
+                },{
+                    "answer": "어느정도 쌓이면 설거지를 한다.",
+                    "point": 1
+                },{
+                    "answer": "사용할 식기가 없을 때 설거지를 한다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "분리수거는 어떻게 하나요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "매일 분리수거를 한다.",
+                    "point": 2
+                },{
+                    "answer": "일주일에 한 번 이상 분리수거를 한다.",
+                    "point": 1
+                },{
+                    "answer": "조금씩 종량제 봉투에 넣는다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "음식물 쓰레기는 어떻게 처리하나요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "매일 처리한다.",
+                    "point": 2
+                },{
+                    "answer": "일주일에 한 번 이상 처리한다.",
+                    "point": 1
+                },{
+                    "answer": "냉동실에 넣어둔다.",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "현관의 신발은 정돈되어 있나요?",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "늘 정리되어 있다.",
+                    "point": 2
+                },{
+                    "answer": "자주 신는 신발은 정리되어 있다.",
+                    "point": 1
+                },{
+                    "answer": "신발들이 널부러져 있다.",
+                    "point": 0
+                }
+            ]
+        }
+    ],
+    "result": [
+        {
+            "title": "생존주의자",
+            "description": "어쨌든 당신은 살아 있습니다.",
+            "imageUrl": "",
+            "point": "0-6"
+        },{
+            "title": "타협가",
+            "description": "최소한의 정리 정돈은 하고 있습니다.",
+            "imageUrl": "",
+            "point": "7-12"
+        },{
+            "title": "일반인",
+            "description": "평범한 사람입니다.",
+            "imageUrl": "",
+            "point": "13-18"
+        },{
+            "title": "어머니의 자랑",
+            "description": "갑작스러운 방문에도 부끄러워하지 않습니다.",
+            "imageUrl": "",
+            "point": "19-24"
+        },{
+            "title": "방의 은인",
+            "description": "당신의 방은 당신에게 감사할 것입니다.",
+            "imageUrl": "",
+            "point": "25-26"
+        }
+    ]
+}
