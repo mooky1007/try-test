@@ -30,6 +30,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
     min-height: 280px;
     flex-shrink: 0;
 }
@@ -44,6 +45,11 @@ body {
     font-size: 14px;
     font-weight: 400;
     color: #666;
+    text-align: center;
+    line-height: 1.5;
+    word-break: keep-all;
+    padding: 0 5%;
+    width: 100%;
 }
 
 .content_wrap .information {
@@ -73,6 +79,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .button_wrap button {

@@ -12,16 +12,16 @@
 <body>
     <div class="view_container">
         <div class="content_wrap">
-            <div class="title">Title</div>
-            <div class="description">description</div>
+            <div class="title"></div>
+            <div class="description"></div>
             <ul class="information">
                 <li>
                     <span>총 문항 :</span>
-                    <span id="question_length">0</span>
+                    <span id="question_length"></span>
                 </li>
                 <li>
                     <span>소요시간 :</span>
-                    <span id="time">0 ~ 0</span>
+                    <span id="time"></span>
                 </li>
             </ul>
         </div>
@@ -30,9 +30,10 @@
         </div>
     </div>
     <script>
-        fetch('./src/roomCleanTest.json')
+        fetch('./src/likeAnimal.json')
         .then((response) => response.json())
         .then((data) => new TestPage(data))
     </script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
