@@ -18,9 +18,10 @@ class TestPage {
             this.indicatorType = Object.values(this.question).map(({type}) => type).filter((el, idx, arr) => arr.indexOf(el) === idx);
             this.type = data.type;
         }
-    }
+    }    
 
     render() {
+        this.DOM.querySelector('.content').innerHTML = '';
         const viewContainer = document.createElement('div');
         viewContainer.classList.add('view_container');
 
@@ -52,7 +53,7 @@ class TestPage {
         viewContainer.appendChild(contentWrap);
         viewContainer.appendChild(buttonWrap);
 
-        this.DOM.appendChild(viewContainer);
+        this.DOM.querySelector('.content').appendChild(viewContainer);
 
         this.init();
     }
@@ -118,6 +119,7 @@ class TestPage {
                 const [min, max] = point.split("-");
                 return this.point >= +min && this.point <= +max ? true : false;
             })[0];
+            console.log(this.userResult)
         }
 
         if(this.type === "indicator" && this.current === this.testLength - 1){
