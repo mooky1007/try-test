@@ -1,5 +1,6 @@
 class TestPage {
-    constructor(data) {
+    constructor(DOM, data) {
+        this.DOM = DOM;
         this.title = data.title;
         this.desc = data.description;
         this.testLength = data.data.length;
@@ -17,26 +18,61 @@ class TestPage {
             this.indicatorType = Object.values(this.question).map(({type}) => type).filter((el, idx, arr) => arr.indexOf(el) === idx);
             this.type = data.type;
         }
+    }
+
+    render() {
+        const viewContainer = document.createElement('div');
+        viewContainer.classList.add('view_container');
+
+        const contentWrap = document.createElement('div');
+        contentWrap.classList.add('content_wrap');
+
+        const title = document.createElement('div');
+        title.classList.add('title');
+        
+        const description = document.createElement('div');
+        description.classList.add('description');
+
+        const information = document.createElement('ul');
+        information.classList.add('information');
+
+        const questionLength = document.createElement('li');
+        questionLength.innerHTML = `<span>총 문항 :</span><span id="question_length"></span>`;
+        const time = document.createElement('li');
+        time.innerHTML = `<span>소요시간 :</span><span id="time"></span>`;
+        information.appendChild(questionLength);
+        information.appendChild(time);
+
+        const buttonWrap = document.createElement('div');
+        buttonWrap.classList.add('button_wrap');
+
+        contentWrap.appendChild(title);
+        contentWrap.appendChild(description);
+        contentWrap.appendChild(information);
+        viewContainer.appendChild(contentWrap);
+        viewContainer.appendChild(buttonWrap);
+
+        this.DOM.appendChild(viewContainer);
 
         this.init();
     }
 
     init() {
-        document.querySelector('.title').innerHTML = this.title;
-        document.querySelector('.description').innerHTML = this.desc;
-        document.querySelector('#question_length').innerHTML = `${this.testLength}문항`;
+        this.DOM.querySelector('.title').innerHTML = this.title;
+        this.DOM.querySelector('.description').innerHTML = this.desc;
+        this.DOM.querySelector('#question_length').innerHTML = `${this.testLength}문항`;
         if(Math.trunc(this.testLength * 10 / 60) > 0){
-            document.querySelector('#time').innerHTML = Math.trunc(this.testLength * 10 / 60) + ' ~ ' + Math.trunc(this.testLength * 20 / 60) + '분';
+            this.DOM.querySelector('#time').innerHTML = Math.trunc(this.testLength * 10 / 60) + ' ~ ' + Math.trunc(this.testLength * 20 / 60) + '분';
         }else{
-            document.querySelector('#time').innerHTML = `1분 이내`;
+            this.DOM.querySelector('#time').innerHTML = `1분 이내`;
         }
 
-        document.querySelector('.information').style.display = 'block';
-        document.querySelector('.button_wrap').innerHTML = '';
+        this.DOM.querySelector('.information').style.display = 'block';
+        this.DOM.querySelector('.button_wrap').innerHTML = '';
         const startBtn = document.createElement('button');
         startBtn.innerHTML = this.startButton || '시작하기';
         startBtn.addEventListener('click', () => this.start());
-        document.querySelector('.button_wrap').appendChild(startBtn);
+        this.DOM.querySelector('.button_wrap').appendChild(startBtn);
     }
 
     start() {
@@ -52,10 +88,10 @@ class TestPage {
     }
 
     renderQuestion() {
-        document.querySelector('.information').style.display = 'none';
-        document.querySelector('.title').innerHTML = `Q${this.current + 1}.`;
-        document.querySelector('.description').innerHTML = this.question[this.current].question;
-        document.querySelector('.button_wrap').innerHTML = '';
+        this.DOM.querySelector('.information').style.display = 'none';
+        this.DOM.querySelector('.title').innerHTML = `Q${this.current + 1}.`;
+        this.DOM.querySelector('.description').innerHTML = this.question[this.current].question;
+        this.DOM.querySelector('.button_wrap').innerHTML = '';
 
         for(let i = 0; i < this.question[this.current].answerList.length; i++){
             const button = document.createElement('button');
@@ -69,7 +105,7 @@ class TestPage {
                 }
                 this.next()
             });
-            document.querySelector('.button_wrap').appendChild(button);
+            this.DOM.querySelector('.button_wrap').appendChild(button);
         }
     }
 
@@ -104,14 +140,14 @@ class TestPage {
             })[0];
         }
 
-        document.querySelector('.title').innerHTML = this.userResult.title;
-        document.querySelector('.description').innerHTML = this.userResult.description;
+        this.DOM.querySelector('.title').innerHTML = this.userResult.title;
+        this.DOM.querySelector('.description').innerHTML = this.userResult.description;
         
-        document.querySelector('.button_wrap').innerHTML = '';
+        this.DOM.querySelector('.button_wrap').innerHTML = '';
         const replayBtn = document.createElement('button');
         replayBtn.innerHTML = '다시하기';
         replayBtn.addEventListener('click', () => this.restart());
-        document.querySelector('.button_wrap').appendChild(replayBtn);
+        this.DOM.querySelector('.button_wrap').appendChild(replayBtn);
         return;
     }
 
@@ -122,3 +158,5 @@ class TestPage {
         this.init();
     }
 }
+
+export default TestPage;
