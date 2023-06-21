@@ -1,17 +1,16 @@
 class Header {
     constructor(DOM) {
         this.DOM = DOM;
-        this.render();
     }
 
     render() {
-        this.DOM.querySelector('header')?.remove();
-
-        const header = document.createElement('header');
-        const h1 = document.createElement('h1');
-        h1.textContent = 'Test List';
-        header.appendChild(h1);
-        this.DOM.appendChild(header);
+        const title = createElement('header', {
+            content: 'Hello, World!',
+            attribute: {
+                class: 'header'
+            }
+        });
+        this.DOM.append(title)
     }
 }
 
