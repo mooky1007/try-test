@@ -212,7 +212,7 @@ class TestPage {
                         webUrl: `https://mooky1007.github.io/try-test/${this.userResult.title}`,
                     },
                 },{
-                    title: `${this.title} 테스트 하러가기`,
+                    title: `${this.title}`,
                     link: {
                         mobileWebUrl: 'https://mooky1007.github.io/try-test/',
                         webUrl: 'https://mooky1007.github.io/try-test/',
