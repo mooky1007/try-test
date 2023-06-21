@@ -32,7 +32,6 @@ class App {
 
         this.DOM.addEventListener('goToHome', (e) => {
             this.DOM.querySelector('.content').scrollTop = 0;
-            testPage.init();
             listPage.render();
         });
 

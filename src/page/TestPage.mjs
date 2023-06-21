@@ -48,7 +48,7 @@ class TestPage {
         const viewContainer = createElement('div', { attribute: { class: 'view_container' } });
         const contentWrap = createElement('div', { attribute: { class: 'content_wrap' } });
         const imageBox = createElement('div', { attribute: { class: 'image_box', style: 'display: none' } });
-        const image = createElement('img', { attribute: { src: this.data.image } });
+        const image = createElement('img', { attribute: { src: "" } });
         const title = createElement('div', { content: this.title, attribute: { class: 'title' } });
         const description = createElement('div', { content: this.desc, attribute: { class: 'description' } });
         const information = createElement('ul', { attribute: { class: 'information' } });
@@ -81,7 +81,6 @@ class TestPage {
         this.indicator = {};
 
         this.DOM.querySelector('.information').style.display = 'block';
-
         this.DOM.querySelector('.button_wrap').innerHTML = '';
         const startBtn = createElement('button', { content: this.startButton || '시작하기', attribute: { class: 'start_btn' } });
         startBtn.addEventListener('click', () => this.start());
