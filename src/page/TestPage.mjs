@@ -154,8 +154,10 @@ class TestPage {
             })[0];
         }
 
-        this.DOM.querySelector('.image_box').style.display = 'block';
-        this.DOM.querySelector('.image_box img').setAttribute('src', this.userResult.imageUrl);
+        if(this.userResult.imageUrl !== "") {
+            this.DOM.querySelector('.image_box').style.display = 'block';
+            this.DOM.querySelector('.image_box img').setAttribute('src', this.userResult.imageUrl);
+        }
         this.DOM.querySelector('.title').innerHTML = this.userResult.title;
         this.DOM.querySelector('.description').innerHTML = this.userResult.description;
 
