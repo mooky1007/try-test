@@ -153,7 +153,7 @@ class TestPage {
         const listBtn = createElement('button', {content: "목록으로"})
 
         listBtn.addEventListener('click', () => {
-            window.location.href = '/';
+            window.location.href = '/try-test/';
         })
 
         this.DOM.querySelector('.button_wrap').appendChild(replayBtn);

@@ -17,7 +17,7 @@ class Header {
         const a = createElement('a', {
             content: '심리&성향&성격 테스트',
             attribute: {
-                href: '/'
+                href: '/try-test/'
             }
         });
 
