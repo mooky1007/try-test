@@ -10,6 +10,8 @@ class App {
         this.selectedTest = "";
         this.urlParams = new URLSearchParams(location.search);
 
+        this.DOM.innerHTML = '';
+
         this.render();
     }
 
