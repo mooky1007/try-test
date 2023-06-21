@@ -208,7 +208,7 @@ class TestPage {
             },
             buttons: [
                 {
-                    title: "결과보기",
+                    title: "테스트 하러가기",
                     link: {
                         mobileWebUrl: `https://mooky1007.github.io/try-test/${location.search.split('&result=')[0]}`,
                         webUrl: `https://mooky1007.github.io/try-test/${location.search.split('&result=')[0]}`,
