@@ -182,7 +182,7 @@ class TestPage {
             objectType: 'feed',
             content: {
                 title: `[ ${this.userResult.title} ]`,
-                description: this.title + '\n' + this.userResult.description.replace(/<br \/>/g, ''),
+                description: this.userResult.description.replace(/<br \/>/g, ''),
                 imageUrl: this.userResult.imageUrl !== "" ? `${window.location.href}${this.userResult.imageUrl.replace('.', '')}` : "",
                 link: {
                     mobileWebUrl: 'https://mooky1007.github.io/try-test/',
@@ -191,7 +191,7 @@ class TestPage {
             },
             buttons: [
                 {
-                    title: '테스트 하러가기',
+                    title: this.title,
                     link: {
                         mobileWebUrl: 'https://mooky1007.github.io/try-test/',
                         webUrl: 'https://mooky1007.github.io/try-test/',
