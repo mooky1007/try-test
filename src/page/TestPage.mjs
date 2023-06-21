@@ -47,6 +47,8 @@ class TestPage {
 
         const viewContainer = createElement('div', { attribute: { class: 'view_container' } });
         const contentWrap = createElement('div', { attribute: { class: 'content_wrap' } });
+        const imageBox = createElement('div', { attribute: { class: 'image_box', style: 'display: none' } });
+        const image = createElement('img', { attribute: { src: this.data.image } });
         const title = createElement('div', { content: this.title, attribute: { class: 'title' } });
         const description = createElement('div', { content: this.desc, attribute: { class: 'description' } });
         const information = createElement('ul', { attribute: { class: 'information' } });
@@ -64,8 +66,9 @@ class TestPage {
         });
         const buttonWrap = createElement('div', { attribute: { class: 'button_wrap' } });
 
+        imageBox.appendChild(image);
         information.append(questionLength, time);
-        contentWrap.append(title, description, information);
+        contentWrap.append(imageBox, title, description, information);
         viewContainer.append(contentWrap, buttonWrap);
         this.content.appendChild(viewContainer);
 
@@ -152,6 +155,8 @@ class TestPage {
             })[0];
         }
 
+        this.DOM.querySelector('.image_box').style.display = 'block';
+        this.DOM.querySelector('.image_box img').setAttribute('src', this.userResult.imageUrl);
         this.DOM.querySelector('.title').innerHTML = this.userResult.title;
         this.DOM.querySelector('.description').innerHTML = this.userResult.description;
 
@@ -167,7 +172,7 @@ class TestPage {
             this.DOM.dispatchEvent(event);
         });
 
-        const shareBtn = createElement('button', { content: '공유하기', attribute: { id: 'kakaotalk-sharing-btn' } });
+        const shareBtn = createElement('button', { content: '카카오톡 결과 공유하기', attribute: { id: 'kakaotalk-sharing-btn' } });
 
         this.DOM.querySelector('.button_wrap').append(replayBtn, shareBtn, listBtn);
 
@@ -175,12 +180,12 @@ class TestPage {
             container: '#kakaotalk-sharing-btn',
             objectType: 'feed',
             content: {
-                title: this.userResult.title,
-                description: this.userResult.description.slice(0, 50).replace(/<br \/>/g, ' ') + '...',
-                imageUrl: 'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+                title: this.title,
+                description: this.userResult.title,
+                imageUrl: this.userResult.imageUrl,
                 link: {
-                    mobileWebUrl: 'https://developers.kakao.com',
-                    webUrl: 'https://developers.kakao.com',
+                    mobileWebUrl: 'https://mooky1007.github.io/try-test/',
+                    webUrl: 'https://mooky1007.github.io/try-test/',
                 },
             },
             buttons: [
