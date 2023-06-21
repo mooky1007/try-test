@@ -72,6 +72,12 @@ class TestPage {
         viewContainer.append(contentWrap, buttonWrap);
         this.content.appendChild(viewContainer);
 
+        if(location.search.includes('result')) {
+            this.DOM.querySelector('.information').style.display = 'none';
+            this.getResult();
+            return;
+        }
+
         this.init();
     }
 
@@ -154,6 +160,15 @@ class TestPage {
             })[0];
         }
 
+        if(location.href.includes('result')){
+            this.userResult = this.result.filter(el => {
+                return el.title === decodeURIComponent(location.href.split('result=')[1])
+            })[0];
+            this.current = this.testLength - 1;
+        }else{
+            history.pushState({}, null, `${location.href}&result=${encodeURIComponent(this.userResult.title)}`);
+        }
+
         if(this.userResult.imageUrl !== "") {
             this.DOM.querySelector('.image_box').style.display = 'block';
             this.DOM.querySelector('.image_box img').setAttribute('src', this.userResult.imageUrl);
@@ -191,7 +206,13 @@ class TestPage {
             },
             buttons: [
                 {
-                    title: this.title,
+                    title: "결과보기",
+                    link: {
+                        mobileWebUrl: `https://mooky1007.github.io/try-test/${this.userResult.title}`,
+                        webUrl: `https://mooky1007.github.io/try-test/${this.userResult.title}`,
+                    },
+                },{
+                    title: `${this.title} 테스트 하러가기`,
                     link: {
                         mobileWebUrl: 'https://mooky1007.github.io/try-test/',
                         webUrl: 'https://mooky1007.github.io/try-test/',
@@ -206,6 +227,7 @@ class TestPage {
         this.current = 0;
         this.point = 0;
         this.indicator = {};
+        history.pushState({}, null, `${location.href.split('&result=')[0]}`);
         this.render();
     }
 }
