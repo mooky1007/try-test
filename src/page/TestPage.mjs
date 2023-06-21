@@ -182,7 +182,7 @@ class TestPage {
             content: {
                 title: `[ ${this.userResult.title} ]`,
                 description: this.title + '\n' + this.userResult.description.replace(/<br \/>/g, ''),
-                imageUrl: `${window.location.origin}${this.userResult.imageUrl.replace('.', '')}`,
+                imageUrl: `${window.location.href}${this.userResult.imageUrl.replace('.', '')}`,
                 link: {
                     mobileWebUrl: 'https://mooky1007.github.io/try-test/',
                     webUrl: 'https://mooky1007.github.io/try-test/',
