@@ -1,6 +1,6 @@
 {
-    "title": "나와 닮은 동물 찾기",
-    "description": "🐱🦁🐯🦒🦊🦝🐮🐷🐗🐭🐰🐻",
+    "title": "나는 어떤 동물을 닮았을까?",
+    "description": "나와 닮은 동물 찾아보기 🐶🐱🦁🐯",
     "type": "indicator",
     "startButtonText": "닮은 동물 찾아보기",
     "data": [
