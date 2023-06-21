@@ -208,14 +208,14 @@ class TestPage {
                 {
                     title: "결과보기",
                     link: {
-                        mobileWebUrl: `https://mooky1007.github.io/try-test/${this.userResult.title}`,
-                        webUrl: `https://mooky1007.github.io/try-test/${this.userResult.title}`,
+                        mobileWebUrl: `https://mooky1007.github.io/try-test/${location.search}`,
+                        webUrl: `https://mooky1007.github.io/try-test/${location.search}`,
                     },
                 },{
                     title: `${this.title}`,
                     link: {
-                        mobileWebUrl: 'https://mooky1007.github.io/try-test/',
-                        webUrl: 'https://mooky1007.github.io/try-test/',
+                        mobileWebUrl: `https://mooky1007.github.io/try-test/${location.search.split('&result=')[0]}`,
+                        webUrl: `https://mooky1007.github.io/try-test/${location.search.split('&result=')[0]}`,
                     },
                 }
             ],
