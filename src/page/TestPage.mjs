@@ -128,7 +128,9 @@ class TestPage {
         }
     }
 
-    getResult() {
+    async getResult() {
+        this.DOM.querySelector('.content').classList.add('loading');
+
         if (this.type === 'point') {
             this.userResult = '';
             this.userResult = this.result.filter(({ point }) => {
@@ -220,6 +222,9 @@ class TestPage {
                 }
             ],
         });
+
+        await new Promise((resolve) => setTimeout(resolve, 300));
+        this.DOM.querySelector('.content').classList.remove('loading');
         return;
     }
 
