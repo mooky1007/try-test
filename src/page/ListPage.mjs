@@ -42,7 +42,7 @@ class ListPage {
             testList.appendChild(li);
         });
 
-        this.DOM.querySelector('.content').appendChild(testList);
+        this.DOM.querySelector('.content').append(testList);
     }
 }
 

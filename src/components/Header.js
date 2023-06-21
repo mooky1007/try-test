@@ -1,16 +1,28 @@
 class Header {
     constructor(DOM) {
         this.DOM = DOM;
+        this.header = this.DOM.querySelector('header');
     }
 
     render() {
-        const title = createElement('header', {
-            content: 'Hello, World!',
+        this.header.innerHTML = '';
+
+        const h1 = createElement('h1', {
+            content: '',
             attribute: {
-                class: 'header'
+                class: 'header_title'
             }
         });
-        this.DOM.append(title)
+
+        const a = createElement('a', {
+            content: '심리&성향&성격 테스트',
+            attribute: {
+                href: '/'
+            }
+        });
+
+        h1.append(a);
+        this.header.append(h1)
     }
 }
 

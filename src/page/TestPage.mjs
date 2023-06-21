@@ -149,7 +149,15 @@ class TestPage {
         const replayBtn = document.createElement('button');
         replayBtn.innerHTML = '다시하기';
         replayBtn.addEventListener('click', () => this.restart());
+
+        const listBtn = createElement('button', {content: "목록으로"})
+
+        listBtn.addEventListener('click', () => {
+            window.location.href = '/';
+        })
+
         this.DOM.querySelector('.button_wrap').appendChild(replayBtn);
+        this.DOM.querySelector('.button_wrap').appendChild(listBtn);
         return;
     }
 

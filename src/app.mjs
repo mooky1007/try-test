@@ -8,13 +8,17 @@ class App {
         this.DOM = DOM;
         this.dataList = {};
         this.selectedTest = "likeAnimal";
+
         this.render();
     }
 
     async render() {
-        this.dataList = await getData();
+        const headerEl = createElement('header');
+        this.DOM.append(headerEl);
+        const contentEl = createElement('div', {attribute: {class: 'content'}});
+        this.DOM.append(contentEl);
 
-        console.log(this.dataList)
+        this.dataList = await getData();
 
         const header = new Header(this.DOM);
         const testPage = new TestPage(this.DOM, this.dataList[this.selectedTest]);
