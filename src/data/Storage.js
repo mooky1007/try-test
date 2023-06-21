@@ -6,6 +6,8 @@ export const getData = async () => {
         "test01",
         "test02",
         "test03",
+        "test04",
+        "test05",
     ]
 
     return Promise.all(dataList.map(async el => {
