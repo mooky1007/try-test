@@ -217,7 +217,7 @@ class TestPage {
             ],
         });
 
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        await new Promise((resolve) => setTimeout(resolve, 600));
         this.DOM.querySelector('.content').classList.remove('loading');
         return;
     }
