@@ -200,7 +200,7 @@ class TestPage {
             content: {
                 title: `[ ${this.userResult.title} ]`,
                 description: this.userResult.description.replace(/<br \/>/g, ''),
-                imageUrl: this.userResult.imageUrl !== "" ? `${window.location.href}${this.userResult.imageUrl.replace('.', '')}` : "",
+                imageUrl: this.userResult.imageUrl !== "" ? `${window.location.href.slpit('?')[0]}${this.userResult.imageUrl.replace('.', '')}` : "",
                 link: {
                     mobileWebUrl: 'https://mooky1007.github.io/try-test/',
                     webUrl: 'https://mooky1007.github.io/try-test/',
@@ -212,12 +212,6 @@ class TestPage {
                     link: {
                         mobileWebUrl: `https://mooky1007.github.io/try-test/${location.search}`,
                         webUrl: `https://mooky1007.github.io/try-test/${location.search}`,
-                    },
-                },{
-                    title: `${this.title}`,
-                    link: {
-                        mobileWebUrl: `https://mooky1007.github.io/try-test/${location.search.split('&result=')[0]}`,
-                        webUrl: `https://mooky1007.github.io/try-test/${location.search.split('&result=')[0]}`,
                     },
                 }
             ],
