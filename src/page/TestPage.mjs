@@ -200,7 +200,7 @@ class TestPage {
             content: {
                 title: `[ ${this.userResult.title} ]`,
                 description: this.userResult.description.replace(/<br \/>/g, ''),
-                imageUrl: this.userResult.imageUrl !== "" ? `${window.location.href.slpit('?')[0]}${this.userResult.imageUrl.replace('.', '')}` : "",
+                imageUrl: this.userResult.imageUrl !== "" ? `${window.location.href.split('?')[0]}${this.userResult.imageUrl.replace('.', '')}` : "",
                 link: {
                     mobileWebUrl: 'https://mooky1007.github.io/try-test/',
                     webUrl: 'https://mooky1007.github.io/try-test/',
