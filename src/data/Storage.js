@@ -1,8 +1,5 @@
 export const getData = async () => {
     const dataList = [
-        "tistory",
-        "roomCleanTest",
-        "likeAnimal",
         "test01",
         "test02",
         "test03",

@@ -8,20 +8,17 @@ class Header {
         this.header.innerHTML = '';
 
         const h1 = createElement('h1', {
-            content: '',
+            content: '심리&성향&성격 테스트',
             attribute: {
                 class: 'header_title'
             }
         });
 
-        const a = createElement('a', {
-            content: '심리&성향&성격 테스트',
-            attribute: {
-                href: '/try-test/'
-            }
+        h1.addEventListener('click', () => {
+            const event = new CustomEvent('goToHome');
+            this.DOM.dispatchEvent(event);
         });
 
-        h1.append(a);
         this.header.append(h1)
     }
 }

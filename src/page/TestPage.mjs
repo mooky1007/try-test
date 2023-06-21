@@ -1,77 +1,72 @@
 class TestPage {
     constructor(DOM, data) {
         this.DOM = DOM;
-        this.title = data.title;
-        this.desc = data.description;
-        this.testLength = data.data.length;
-        this.startButton = data.startButtonText;
+        this.content = this.DOM.querySelector('.content');
+        this.data = data;
+        this.title = this.data.title;
+        this.desc = this.data.description;
+        this.testLength = this.data.data.length;
+        this.startButton = this.data.startButtonText;
         this.current = 0;
-        this.question = data.data;
-        this.result = data.result;
+        this.question = this.data.data;
+        this.result = this.data.result;
 
-        if(data.type === 'point'){
+        if(this.data.type === 'point'){
             this.point = 0;
             this.type = data.type;
         }
-        if(data.type === 'indicator'){
+        if(this.data.type === 'indicator'){
             this.indicator = {};
             this.indicatorType = Object.values(this.question).map(({type}) => type).filter((el, idx, arr) => arr.indexOf(el) === idx);
             this.type = data.type;
         }
-    }    
+    }
 
     render() {
-        this.DOM.querySelector('.content').innerHTML = '';
-        const viewContainer = document.createElement('div');
-        viewContainer.classList.add('view_container');
+        this.content.innerHTML = '';
 
-        const contentWrap = document.createElement('div');
-        contentWrap.classList.add('content_wrap');
+        this.title = this.data.title;
+        this.type = this.data.type;
+        this.desc = this.data.description;
+        this.testLength = this.data.data.length;
+        this.startButton = this.data.startButtonText;
+        this.question = this.data.data;
+        this.result = this.data.result;
 
-        const title = document.createElement('div');
-        title.classList.add('title');
-        
-        const description = document.createElement('div');
-        description.classList.add('description');
+        if(this.data.type === 'point'){
+            this.point = 0;
+        }
+        if(this.data.type === 'indicator'){
+            this.indicator = {};
+            this.indicatorType = Object.values(this.question).map(({type}) => type).filter((el, idx, arr) => arr.indexOf(el) === idx);
+        }
 
-        const information = document.createElement('ul');
-        information.classList.add('information');
+        const viewContainer = createElement('div', {attribute: {class: 'view_container'}});
+        const contentWrap = createElement('div', {attribute: {class: 'content_wrap'}});
+        const title = createElement('div', {content: this.title, attribute: {class: 'title'}});
+        const description = createElement('div', {content: this.desc, attribute: {class: 'description'}});
+        const information = createElement('ul', {attribute: {class: 'information'}});
+        const questionLength = createElement('li', {content: `<span>총 문항 :</span><span id="question_length">${this.testLength}문항</span>`, attribute: {class: 'question_length'}});
+        const time = createElement('li', {content: `<span>소요시간 :</span><span id="time">${Math.trunc(this.testLength * 10 / 60) > 0 ? Math.trunc(this.testLength * 10 / 60) + ' ~ ' + Math.trunc(this.testLength * 20 / 60) + '분' : '1분 이내'}</span>`, attribute: {class: 'time'}});
+        const buttonWrap = createElement('div', {attribute: {class: 'button_wrap'}});
 
-        const questionLength = document.createElement('li');
-        questionLength.innerHTML = `<span>총 문항 :</span><span id="question_length"></span>`;
-        const time = document.createElement('li');
-        time.innerHTML = `<span>소요시간 :</span><span id="time"></span>`;
-        information.appendChild(questionLength);
-        information.appendChild(time);
-
-        const buttonWrap = document.createElement('div');
-        buttonWrap.classList.add('button_wrap');
-
-        contentWrap.appendChild(title);
-        contentWrap.appendChild(description);
-        contentWrap.appendChild(information);
-        viewContainer.appendChild(contentWrap);
-        viewContainer.appendChild(buttonWrap);
-
-        this.DOM.querySelector('.content').appendChild(viewContainer);
+        information.append(questionLength, time);
+        contentWrap.append(title, description, information);
+        viewContainer.append(contentWrap, buttonWrap);
+        this.content.appendChild(viewContainer);
 
         this.init();
     }
 
     init() {
-        this.DOM.querySelector('.title').innerHTML = this.title;
-        this.DOM.querySelector('.description').innerHTML = this.desc;
-        this.DOM.querySelector('#question_length').innerHTML = `${this.testLength}문항`;
-        if(Math.trunc(this.testLength * 10 / 60) > 0){
-            this.DOM.querySelector('#time').innerHTML = Math.trunc(this.testLength * 10 / 60) + ' ~ ' + Math.trunc(this.testLength * 20 / 60) + '분';
-        }else{
-            this.DOM.querySelector('#time').innerHTML = `1분 이내`;
-        }
-
+        this.current = 0;
+        this.point = 0;
+        this.indicator = {};
+        
         this.DOM.querySelector('.information').style.display = 'block';
+
         this.DOM.querySelector('.button_wrap').innerHTML = '';
-        const startBtn = document.createElement('button');
-        startBtn.innerHTML = this.startButton || '시작하기';
+        const startBtn = createElement('button', {content: this.startButton || "시작하기", attribute: {class: 'start_btn'}});
         startBtn.addEventListener('click', () => this.start());
         this.DOM.querySelector('.button_wrap').appendChild(startBtn);
     }
@@ -112,6 +107,7 @@ class TestPage {
 
     getResult() {
         if(this.type === "point"){
+            this.userResult = "";
             this.userResult = this.result.filter(({point}) => {
                 if(point.split("-").length === 1){
                     return this.point === +point ? true : false;
@@ -119,7 +115,7 @@ class TestPage {
                 const [min, max] = point.split("-");
                 return this.point >= +min && this.point <= +max ? true : false;
             })[0];
-            console.log(this.userResult)
+
         }
 
         if(this.type === "indicator" && this.current === this.testLength - 1){
@@ -142,6 +138,7 @@ class TestPage {
             })[0];
         }
 
+
         this.DOM.querySelector('.title').innerHTML = this.userResult.title;
         this.DOM.querySelector('.description').innerHTML = this.userResult.description;
         
@@ -153,11 +150,11 @@ class TestPage {
         const listBtn = createElement('button', {content: "목록으로"})
 
         listBtn.addEventListener('click', () => {
-            window.location.href = '/try-test/';
+            const event = new CustomEvent('goToHome');
+            this.DOM.dispatchEvent(event)
         })
 
-        this.DOM.querySelector('.button_wrap').appendChild(replayBtn);
-        this.DOM.querySelector('.button_wrap').appendChild(listBtn);
+        this.DOM.querySelector('.button_wrap').append(replayBtn, listBtn);
         return;
     }
 
@@ -165,7 +162,7 @@ class TestPage {
         this.current = 0;
         this.point = 0;
         this.indicator = {};
-        this.init();
+        this.render();
     }
 }
 

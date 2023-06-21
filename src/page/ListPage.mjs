@@ -1,48 +1,33 @@
 class ListPage {
     constructor(DOM, data) {
         this.DOM = DOM;
+        this.content = this.DOM.querySelector('.content');
         this.data = data;
     }
 
     render() {
-        this.DOM.querySelector('.content').innerHTML = '';
+        this.content.innerHTML = '';
 
         const testList = document.createElement('ul');
         testList.classList.add('test_list');
 
         Object.values(this.data).forEach(({title, description, data, id}) => {
-            const li = document.createElement('li');
-            const titleSpan = document.createElement('span');
-            const descSpan = document.createElement('span');
-            const span = document.createElement('span');
+            const li = createElement('li');
+            const titleSpan = createElement('span', {content: title, attribute: {class: 'title'}});
+            const descSpan = createElement('span', {content: description, attribute: {class: 'desc'}});
+            const span = createElement('span', {content: `${data.length}문항`, attribute: {class: 'question_length'}});
 
-            titleSpan.classList.add('title');
-            descSpan.classList.add('desc');
-            span.classList.add('question_length');
-
-            titleSpan.textContent = title;
-            descSpan.textContent = description;
-            span.textContent = `${data.length}문항`;
-
-            li.appendChild(titleSpan);
-            li.appendChild(descSpan);
-            li.appendChild(span);
+            li.append(titleSpan, descSpan, span);
 
             li.addEventListener('click', () => {
-                const event = new CustomEvent('changeTest', {
-                    bubbles: true,
-                    detail: {
-                        id: id
-                    }
-                });
-
+                const event = new CustomEvent('changeTest', {detail: { id: id }});
                 this.DOM.dispatchEvent(event);
             });
 
             testList.appendChild(li);
         });
 
-        this.DOM.querySelector('.content').append(testList);
+        this.content.append(testList);
     }
 }
 

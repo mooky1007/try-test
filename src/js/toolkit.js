@@ -4,7 +4,7 @@ const createElement = (dom, config) => {
     if(config){
         const { content, attribute } = config;
         attribute && Object.keys(attribute).forEach(key => el.setAttribute(key, attribute[key]));
-        content && (el.textContent = content);
+        content && (el.innerHTML = content);
     }
 
     return el;

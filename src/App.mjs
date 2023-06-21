@@ -7,18 +7,18 @@ class App {
     constructor(DOM) {
         this.DOM = DOM;
         this.dataList = {};
-        this.selectedTest = "likeAnimal";
+        this.selectedTest = "";
 
         this.render();
     }
 
     async render() {
         const headerEl = createElement('header');
-        this.DOM.append(headerEl);
         const contentEl = createElement('div', {attribute: {class: 'content'}});
-        this.DOM.append(contentEl);
+        this.DOM.append(headerEl, contentEl);
 
         this.dataList = await getData();
+        this.selectedTest = Object.keys(this.dataList)[0];
 
         const header = new Header(this.DOM);
         const testPage = new TestPage(this.DOM, this.dataList[this.selectedTest]);
@@ -27,26 +27,13 @@ class App {
         this.DOM.addEventListener('changeTest', (e) => {
             this.selectedTest = e.detail.id;
             testPage.data = this.dataList[this.selectedTest];
-
-            testPage.title = this.dataList[this.selectedTest].title;
-            testPage.desc = this.dataList[this.selectedTest].description;
-            testPage.testLength = this.dataList[this.selectedTest].data.length;
-            testPage.startButton = this.dataList[this.selectedTest].startButtonText;
-            testPage.current = 0;
-            testPage.question = this.dataList[this.selectedTest].data;
-            testPage.result = this.dataList[this.selectedTest].result;
-
-            if(this.dataList[this.selectedTest].type === 'point'){
-                testPage.point = 0;
-                testPage.type = this.dataList[this.selectedTest].type;
-            }
-            if(this.dataList[this.selectedTest].type === 'indicator'){
-                testPage.indicator = {};
-                testPage.indicatorType = Object.values(this.dataList[this.selectedTest].data).map(({type}) => type).filter((el, idx, arr) => arr.indexOf(el) === idx);
-                testPage.type = this.dataList[this.selectedTest].type;
-            }
-
             testPage.render();
+        });
+
+        this.DOM.addEventListener('goToHome', (e) => {
+            this.DOM.querySelector('.content').scrollTop = 0;
+            testPage.init();
+            listPage.render();
         });
 
         header.render();
