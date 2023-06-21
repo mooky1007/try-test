@@ -1,0 +1,100 @@
+{
+    "title": "나와 닮은 동물 찾기",
+    "description": "🐱🦁🐯🦒🦊🦝🐮🐷🐗🐭🐰🐻",
+    "type": "indicator",
+    "startButtonText": "닮은 동물 찾아보기",
+    "data": [
+        {
+            "question": "당신은 어떤 음식을 선호하시나요?",
+            "type": "AB",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "🥗 신선한 채소와 새콤한 과일",
+                    "indicator": "A"
+                },{
+                    "answer": "🍖 품질좋은 고기",
+                    "indicator": "B"
+                }
+            ]
+        },{
+            "question": "만약 당신이 동물이라면 어디에 살고 있나요?",
+            "type": "AB",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "🌱 푸르른 초원",
+                    "indicator": "A"
+                },{
+                    "answer": "🌳 울창한 숲",
+                    "indicator": "B"
+                }
+            ]
+        },{
+            "question": "사람들과 어울리는 것을 좋아하나요?",
+            "type": "CD",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "😀 네, 좋아해요!",
+                    "indicator": "C"
+                },{
+                    "answer": "😐 별로 좋아하지 않아요.",
+                    "indicator": "D"
+                }
+            ]
+        },{
+            "question": "새로운 사람들과 친해지는 것을 좋아하나요?",
+            "type": "CD",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "😘 아주 좋아해요!",
+                    "indicator": "C"
+                },{
+                    "answer": "😑 별로 좋아하지 않아요.",
+                    "indicator": "D"
+                }
+            ]
+        }
+    ],
+    "result": [
+        {
+            "title": "🐶 강아지",
+            "description": "당신은 강아지와 닮았네요.",
+            "imageUrl": "",
+            "indicator": "AC",
+            "relation": {
+                "good": "AD",
+                "bad": "BC"
+            }
+        },{
+            "title": "😺 고양이",
+            "description": "당신은 고양이와 닮았네요.",
+            "imageUrl": "",
+            "indicator": "AD",
+            "relation": {
+                "good": "BC",
+                "bad": "AC"
+            }
+        },{
+            "title": "🦁 사자",
+            "description": "당신은 사자와 닮았네요.",
+            "imageUrl": "",
+            "indicator": "BC",
+            "relation": {
+                "good": "AC",
+                "bad": "AD"
+            }
+        },{
+            "title": "🐯 호랑이",
+            "description": "당신은 호랑이와 닮았네요.",
+            "imageUrl": "",
+            "indicator": "BD",
+            "relation": {
+                "good": "AD",
+                "bad": "BC"
+            }
+        }
+    ]
+}
