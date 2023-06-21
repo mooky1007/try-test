@@ -180,8 +180,8 @@ class TestPage {
             container: '#kakaotalk-sharing-btn',
             objectType: 'feed',
             content: {
-                title: `[ ${this.title} ]`,
-                description: this.userResult.title + '\n' + this.userResult.description.replace(/<br \/>/g, ''),
+                title: `[ ${this.userResult.title} ]`,
+                description: this.title + '\n' + this.userResult.description.replace(/<br \/>/g, ''),
                 imageUrl: `${window.location.origin}${this.userResult.imageUrl.replace('.', '')}`,
                 link: {
                     mobileWebUrl: 'https://mooky1007.github.io/try-test/',
