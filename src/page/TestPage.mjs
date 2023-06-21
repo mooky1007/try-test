@@ -202,16 +202,16 @@ class TestPage {
                 description: this.userResult.description.replace(/<br \/>/g, ''),
                 imageUrl: this.userResult.imageUrl !== "" ? `${window.location.href.split('?')[0]}${this.userResult.imageUrl.replace('.', '')}` : "",
                 link: {
-                    mobileWebUrl: 'https://mooky1007.github.io/try-test/',
-                    webUrl: 'https://mooky1007.github.io/try-test/',
+                    mobileWebUrl: `https://mooky1007.github.io/try-test/${location.search}`,
+                    webUrl: `https://mooky1007.github.io/try-test/${location.search}`,
                 },
             },
             buttons: [
                 {
                     title: "결과보기",
                     link: {
-                        mobileWebUrl: `https://mooky1007.github.io/try-test/${location.search}`,
-                        webUrl: `https://mooky1007.github.io/try-test/${location.search}`,
+                        mobileWebUrl: `https://mooky1007.github.io/try-test/${location.search.split('&result=')[0]}`,
+                        webUrl: `https://mooky1007.github.io/try-test/${location.search.split('&result=')[0]}`,
                     },
                 }
             ],
