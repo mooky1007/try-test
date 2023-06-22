@@ -3,6 +3,7 @@ export const getData = async () => {
         "test04",
         "test03",
         "test02",
+        "test05",
         "test01",
     ]
 
