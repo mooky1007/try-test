@@ -107,6 +107,6 @@ header h1 { cursor: pointer; }
  .test_list li { max-width: 100%; } 
  }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 600px){
  .test_list .question_length { display: none; } 
  }
