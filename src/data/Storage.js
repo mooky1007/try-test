@@ -1,5 +1,6 @@
 export const getData = async () => {
     const dataList = [
+        "test06",
         "test04",
         "test03",
         "test02",

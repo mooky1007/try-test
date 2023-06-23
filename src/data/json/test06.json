@@ -1,0 +1,344 @@
+{
+    "title": "🤷‍♀️ 보살 레벨 테스트(여자 ver)",
+    "description": "남자친구의 여사친, 어디까지 허용가능? feat.개빡침 주의",
+    "type": "point",
+    "designConfig" : {
+        "fontColor": "#fff",
+        "backgroundColor": "#000",
+        "fontFamily": "Noto Sans KR"
+    },
+    "data": [
+        {
+            "question": "남친과 여사친의 하이파이브",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친 어깨 터치",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친 진로 상담 해줌",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친한테 개인적인 카톡",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "근데 귀여운 이모티콘 보냄",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "근데 그게 내일 점심 약속 일정잡는거였음",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "셋이 있는데 지들끼리만 아는 얘기or농담",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친이 제일 친한 친구라고 말하고 다님",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "그러면서 연애상담함",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "미쳤나",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "남친과 여사친이 같이 셀카찍음",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 그걸 인스타에 올림",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친한테 윙크함",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친한테 바프 사진 보냄",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친한테 수영복 골라달라함",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친이랑 주말밤에 술마심",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "그리고 새벽에 둘이 공원 산책함",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "그러다 남친이 여사친 머리 쓰담쓰담함",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친 생일에 남친이 편지써줌",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "남친 통화목록 볼 때 마다 여사친 이름 발견",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "둘이 우정타투",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "미친놈들",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "남친이랑 여사친 커플로 오해받음",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "여사친이 남친한테 여친이랑 나랑 누가 더 소중해 시전",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "근데 남친 머뭇머뭇",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "불가능",
+                    "point": 0
+                }
+            ]
+        },{
+            "question": "알고보니 여사친이 전여친",
+            "imageUrl": "",
+            "answerList": [
+                {
+                    "answer": "가능",
+                    "point": 1
+                },{
+                    "answer": "미친년ㅇ아!!!!!",
+                    "point": 0
+                }
+            ]
+        }
+    ],
+    "result": [
+        {
+            "title": "보살 레벨 0",
+            "description": "나는 참지 않는다구~",
+            "imageUrl": "",
+            "point": "0-2"
+        },{
+            "title": "보살 레벨 1",
+            "description": "최소한의 사회생활 보장.. 이지만 참지 않음",
+            "imageUrl": "",
+            "point": "3-5"
+        },{
+            "title": "보살 레벨 2",
+            "description": "어느정도 참고 살지만 참지 않음",
+            "imageUrl": "",
+            "point": "6-8"
+        },{
+            "title": "보살 레벨 3",
+            "description": "선 지켜라.. 뒤지기 싫으면..",
+            "imageUrl": "",
+            "point": "9-11"
+        },{
+            "title": "보살 레벨 4",
+            "description": "XX만 안하면 되지 뭘ㅎ",
+            "imageUrl": "",
+            "point": "12-14"
+        },{
+            "title": "보살 레벨 5",
+            "description": "어~ 나도 남사친이랑 다 할꺼야~",
+            "imageUrl": "",
+            "point": "15-17"
+        },{
+            "title": "보살 레벨 6",
+            "description": "방치형 연애ing",
+            "imageUrl": "",
+            "point": "18-20"
+        },{
+            "title": "보살 레벨 7",
+            "description": "결혼하셨.. 아닌.. 그.. 왜 사귀고 계신지..",
+            "imageUrl": "",
+            "point": "21-24"
+        }
+    ]
+}
