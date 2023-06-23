@@ -110,10 +110,10 @@
             "answerList": [
                 {
                     "answer": "예",
-                    "point": 0
+                    "point": 1
                 },{
                     "answer": "아니요",
-                    "point": 1
+                    "point": 0
                 }
             ]
         },{
